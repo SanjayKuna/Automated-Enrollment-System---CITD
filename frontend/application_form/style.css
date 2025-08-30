@@ -1,0 +1,401 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dcdcdc;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    line-height: 1.6;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 900px;
+    background: #fff;
+    /* FIX: Removed top padding to fix extra space */
+    padding: 0 2rem 2rem;
+    border: 2px solid #000;
+    margin: auto;
+}
+
+/* Header Styles */
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1rem;
+    /* Add padding here to compensate for the container's removed padding */
+    padding: 2rem 0 1rem 0;
+    border-bottom: 2px solid #000;
+}
+
+.logo-left, .logo-right {
+    flex: 1;
+}
+
+.logo-left img, .logo-right img {
+    width: 80px;
+    height: 80px;
+}
+
+.header-text {
+    flex: 4;
+}
+
+.header-text h1, .header-text h2 {
+    font-weight: bold;
+    margin: 0;
+}
+
+.header-text h1 {
+    font-size: 1.2rem;
+}
+
+.header-text h2 {
+    font-size: 1.4rem;
+}
+
+.header-text p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+}
+
+.contact-info a {
+    color: blue;
+    text-decoration: underline;
+}
+
+.iso-cert {
+    font-size: 0.8rem !important;
+}
+
+/* Form Title */
+.form-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-title h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 5px;
+    display: inline-block;
+}
+
+/* General Form Styles */
+form {
+    font-size: 0.9rem;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.form-row label {
+    white-space: nowrap;
+}
+
+.dotted-input, .table-input, textarea.dotted-input {
+    border: none;
+    border-bottom: 1px dotted #000;
+    padding: 2px;
+    font-size: 0.9rem;
+    background-color: transparent;
+}
+
+.full-width {
+    flex-grow: 1;
+}
+
+.checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #000;
+    vertical-align: middle;
+}
+
+.main-content-wrapper {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-fields {
+    flex: 3;
+}
+
+.form-fields .dotted-input {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.photo-placeholder {
+    flex: 30px;
+    border: 2px solid #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    width: 100px;
+    height: 180px;
+    padding: 4px;
+}
+
+.photo-placeholder img#preview {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 7px;
+}
+
+.custom-upload-btn {
+    background-color: #ddd;
+    padding: 5px 10px;
+    border: 1px solid #000;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+#fileName {
+    font-size: 0.8rem;
+    color: #333;
+}
+
+.address-row {
+    align-items: flex-start;
+}
+
+.address-row textarea {
+    flex-grow: 1;
+}
+
+.caste-options {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Table Styles */
+.education-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.education-table th, .education-table td {
+    border: 1px solid #000;
+    padding: 5px;
+    text-align: center;
+}
+
+.education-table th {
+    font-weight: normal;
+}
+
+.table-input {
+    width: 98%;
+    border: none;
+}
+
+/* Payment Details */
+.payment-details {
+    padding-left: 20px;
+}
+
+.payment-details > div {
+    display: grid;
+    grid-template-columns: auto 1fr auto 1fr auto 1fr;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+/* Documents & Declaration */
+.documents-list, .declaration {
+    margin: 1.5rem 0;
+}
+
+.documents-list h4, .declaration h4 {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.doc-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    margin-bottom: 10px;
+}
+
+.declaration p {
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+/* Signature Section */
+.signature-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+.last-row {
+    margin-top: 5rem;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.submit-btn:disabled {
+    background-color: #ccc;
+}
+
+/* --- OPTIMIZED PRINT STYLES --- */
+@media print {
+    @page {
+        size: A4;
+        margin: 10mm;
+    }
+
+    body {
+        background-color: #fff;
+        font-size: 9pt;
+        line-height: 1.25;
+        padding: 0;
+        margin: 0;
+    }
+
+    .form-container {
+        width: 100%;
+        max-width: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        box-shadow: none;
+        page-break-inside: avoid;
+    }
+
+    /* Hide non-printable elements */
+    .submit-btn, .custom-upload-btn, #fileName {
+        display: none !important;
+    }
+
+    /* Header compression */
+    .form-header {
+        margin-bottom: 8px;
+        padding: 0 0 8px 0; /* No top padding for print */
+    }
+
+    .logo-left img, .logo-right img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .header-text h1 {
+        font-size: 11pt;
+    }
+
+    .header-text h2 {
+        font-size: 13pt;
+    }
+
+    .header-text p {
+        margin: 1px 0;
+        font-size: 8pt;
+    }
+
+    .form-title {
+        margin-bottom: 10px;
+    }
+
+    .form-title h3 {
+        font-size: 10pt;
+        padding: 2px;
+    }
+
+    /* Form row and element spacing */
+    .form-row, .payment-details > div {
+        margin-bottom: 4px;
+        gap: 8px;
+    }
+
+    .dotted-input, .table-input, textarea.dotted-input {
+        padding: 1px;
+        font-size: 9pt;
+    }
+
+    .main-content-wrapper {
+        gap: 10px;
+    }
+
+
+    /* .photo-placeholder img#preview {
+        height: 105px;
+    } */
+
+    .education-table table {
+        margin: 8px 0;
+    }
+
+    .education-table th, .education-table td {
+        padding: 3px;
+    }
+
+    .documents-list, .declaration {
+        margin: 10px 0;
+    }
+
+    .documents-list h4, .declaration h4 {
+        margin-bottom: 5px;
+        font-size: 9.5pt;
+    }
+
+    .declaration p {
+        margin-bottom: 4px;
+    }
+
+    .doc-options {
+        margin-bottom: 5px;
+        gap: 5px 15px;
+    }
+
+    /* Signature Section */
+    /* FIX: Tightened margins to save vertical space */
+    .signature-section {
+        margin-top: 15px;
+    }
+
+    .last-row {
+        margin-top: 25px;
+    }
+
+    a {
+        color: #000 !important;
+        text-decoration: none !important;
+    }
+    .signature-section.last-row {
+  margin-top: 2rem;   /* adjust value as needed */
+}
+
+}
